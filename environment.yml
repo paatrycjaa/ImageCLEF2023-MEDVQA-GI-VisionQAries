@@ -1,0 +1,25 @@
+name: image-clef
+channels:
+  - pytorch
+  - nvidia
+dependencies:
+  - python==3.10
+  - notebook
+  - numpy
+  - pandas
+  - Pillow
+  - nltk
+  - transformers
+  - pytorch
+  - datasets
+  - scikit-learn
+  - pylint
+  - black
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.7
+  - pip
+  - pip:
+    - 'git+https://github.com/facebookresearch/detectron2.git'
+    - opencv-python

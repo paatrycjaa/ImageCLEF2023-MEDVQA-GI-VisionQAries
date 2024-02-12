@@ -1,0 +1,20 @@
+MODEL:
+  THING_CLASSES: ["POLYP"]
+  NUM_CLASSES: 1
+  DETECTRON_CONFIG_FILE: "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"
+  DETECTRON_MODEL_WEIGHTS: "COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"
+DATASET:
+  DATASET_DIR : "data"
+  DATASET_TRAIN_NAME : "image_clef_train"
+  DATASET_TEST_NAME : "image_clef_test"
+  DATASET_VALID_NAME : "image_clef_valid"
+  NON_CATEGORY_DATA : True
+HYPERPARAMETERS:
+  TOTAL_BATCH_SIZE: 4
+  EPOCHS: 300
+  BATCH_SIZE: 4
+
+
+
+
+
