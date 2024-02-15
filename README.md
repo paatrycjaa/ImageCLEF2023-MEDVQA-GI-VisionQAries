@@ -44,4 +44,12 @@ Please download data by following instructions in `data/README.md`.
 
 ### Run code
 
-To be added
+#### VQA
+
+python3 src/pipeline_vqga.py DATA_PATH MODELS_PATH TRAIN_FLAG TEMPLATE_PATH
+
+python3 src/pipeline_vqga.py \
+    "ImageCLEFmed-MEDVQA-GI-2023-Development-Dataset" \
+    "models/" \
+    "true" \
+    "src/template/vqa_05_dense_1024.yaml"
