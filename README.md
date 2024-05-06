@@ -34,19 +34,25 @@ conda activate image-clef
 Run the following command to execute the VQA pipeline:
 
 ```bash
-python3 src/pipeline_vqga.py DATA_PATH MODELS_PATH TRAIN_FLAG TEMPLATE_PATH
+python3 src/pipeline_vqga.py DATA_PATH MODELS_PATH TRAIN_FLAG INPUT_CONFIG INFERENCE_DATA_PATH INFERENCE_TEXTS_PATH INFERENCE_OUTPUT_PATH
 ```
 
 Example:
 
 ```bash
 python3 src/pipeline_vqga.py \
-    "ImageCLEFmed-MEDVQA-GI-2023-Development-Dataset" \
-    "models/" \
-    "true" \
-    "src/template/vqa_05_dense_1024.yaml"
+  "data/" \
+  "models/" \
+  "true" \
+  "src/template/vqg_05_dense_8k.yaml" \
+  "true" \
+  "data/ImageCLEFmed-MEDVQA-GI-2023-Testing-Dataset/images/" \
+  "data/inference_answers.txt" \
+  "vqg_05_dense_8k.json"
 ```
 
 #### Task 3 - VLQA
 
-Comming soon...
+- Training: [`src/train_test.py`](src/train_test.py)
+- Simple inference: [`src/predict_test.py`](src/predict_test.py)
+- Evaluation: [`src/eval_test.py`](src/eval_test.py)
