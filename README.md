@@ -1,55 +1,58 @@
 # ImageCLEF2023-MEDVQA-GI-VisionQAries
-Repository with solution of tasks from the ImageCLEF 2023 Challange Medical Visual Question Answering for GI Task - MEDVQA-GI.
+
+Repository containing the solution to the Medical Visual Question Answering for GI Task (MEDVQA-GI) in the ImageCLEF 2023 Challenge.
 
 ## Overview
-This repository contain the code used in the publication titled "Language-based colonoscopy image analysis with pretrained neural networks" that was created for ImageCLEF 2023 lab (Medical Visual Question Answering for GI Task - MEDVQA-GI).
 
-#### Publication Information
-Title: Language-based colonoscopy image analysis with pretrained neural networks <br />
+This repository contains the code and implementation details for the publication titled "**[Language-based colonoscopy image analysis with pretrained neural networks](https://ceur-ws.org/Vol-3497/paper-120.pdf)**" which was created for ImageCLEF 2023 Lab: [Medical Visual Question Answering for GI Task - MEDVQA-GI](https://www.imageclef.org/2023/medical/vqa).
+
+### Publication Information
+
+Title: Language-based colonoscopy image analysis with pretrained neural networks
+
 Authors: Patrycja Cieplicka, Julia Kłos, Maciej Morawski, Jarosław Opała
 
-### Data
-Please download data by following instructions in `data/README.md`.
+## Getting Started
 
+### Data Preparation
 
-### Environment setup
+Please follow the instructions in [data/README.md](data/README.md) to download the required data.
 
-1. Create Conda Environment and Install Dependencies
+### Environment Setup (Conda)
 
-    ```bash
-    conda env create -f environment.yml
-    ```
+Create and activate a new Conda environment:
 
-2. Activate Conda Environment
+```bash
+conda env create -f environment.yml
+conda activate image-clef
+```
 
-    ```bash
-    conda activate image-clef
-    ```
+### Running the Code
 
-### Updating environment - if `environment.yml` file was changed
+#### Task 1 - VQA
 
-1. Activate Conda Environment
+Run the following command to execute the VQA pipeline:
 
-    ```bash
-    conda activate image-clef
-    ```
+```bash
+python3 src/pipeline_vqga.py DATA_PATH MODELS_PATH TRAIN_FLAG INPUT_CONFIG INFERENCE_DATA_PATH INFERENCE_TEXTS_PATH INFERENCE_OUTPUT_PATH
+```
 
+Example:
 
-2. Update Conda Environment Dependencies
-
-    ```bash
-    conda env update -f environment.yml --prune
-    ```
-
-
-### Run code
-
-#### VQA
-
-python3 src/pipeline_vqga.py DATA_PATH MODELS_PATH TRAIN_FLAG TEMPLATE_PATH
-
+```bash
 python3 src/pipeline_vqga.py \
-    "ImageCLEFmed-MEDVQA-GI-2023-Development-Dataset" \
-    "models/" \
-    "true" \
-    "src/template/vqa_05_dense_1024.yaml"
+  "data/" \
+  "models/" \
+  "true" \
+  "src/template/vqg_05_dense_8k.yaml" \
+  "true" \
+  "data/ImageCLEFmed-MEDVQA-GI-2023-Testing-Dataset/images/" \
+  "data/inference_answers.txt" \
+  "vqg_05_dense_8k.json"
+```
+
+#### Task 3 - VLQA
+
+- Training: [`src/train_test.py`](src/train_test.py)
+- Simple inference: [`src/predict_test.py`](src/predict_test.py)
+- Evaluation: [`src/eval_test.py`](src/eval_test.py)
