@@ -29,9 +29,9 @@ conda activate image-clef
 
 ### Running the Code
 
-#### Task 1 - VQA
+#### Task 1 - VQA / Task 2 - VQG
 
-Run the following command to execute the VQA pipeline:
+Run the following command to execute the VQA/VQG pipeline:
 
 ```bash
 python3 src/pipeline_vqga.py DATA_PATH MODELS_PATH TRAIN_FLAG INPUT_CONFIG INFERENCE_DATA_PATH INFERENCE_TEXTS_PATH INFERENCE_OUTPUT_PATH
