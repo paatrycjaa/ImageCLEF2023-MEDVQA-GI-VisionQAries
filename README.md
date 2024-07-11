@@ -37,7 +37,7 @@ Run the following command to execute the VQA/VQG pipeline:
 python3 src/pipeline_vqga.py DATA_PATH MODELS_PATH TRAIN_FLAG INPUT_CONFIG INFERENCE_DATA_PATH INFERENCE_TEXTS_PATH INFERENCE_OUTPUT_PATH
 ```
 
-Example (VQG):
+Example:
 
 ```bash
 python3 src/pipeline_vqga.py \
