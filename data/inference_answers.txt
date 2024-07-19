@@ -1,0 +1,63 @@
+11-20mm
+5-10mm
+< 5mm
+>20mm
+Barretts
+Biopsy forceps
+Black
+Blue
+Brown
+Cecum
+Center
+Center-left
+Center-right
+Colonoscopy
+Five
+Four
+Gastroscopy
+Green
+Grey
+Ileum
+Injection needle
+Ink
+Lower-center
+Lower-left
+Lower-right
+Lower-rigth
+Metal clip
+No
+None
+Not relevant
+Oesophagitis
+One
+Orange
+Pale Pink
+Paris iia
+Paris ip
+Paris is
+Pink
+Pink/Red
+Polyp
+Polyp snare
+Purple
+Pylorus
+Red
+Six
+Sixteen
+Three
+Tube
+Two
+Ulcerative colitis
+Upper-center
+Upper-left
+Upper-right
+Violet
+White
+Yellow
+Yes
+Z-line
+Zero
+brown
+burgundy
+grey
+purple
